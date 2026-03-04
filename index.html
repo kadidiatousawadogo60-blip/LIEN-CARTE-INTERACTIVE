@@ -45,7 +45,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[9.251053061329879,-8.087996772037734],[15.274377998510511,4.351624967494776]]);
+        }).fitBounds([[9.279097944163757,-6.486234966709207],[15.27436424537811,2.7563138943967376]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -382,11 +382,8 @@
                         <td>' + (feature.properties['site'] !== null ? autolinker.link(String(feature.properties['site']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Nbre-forag</th>\
-                        <td>' + (feature.properties['Nbre-forag'] !== null ? autolinker.link(String(feature.properties['Nbre-forag']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['zone- proj'] !== null ? autolinker.link(String(feature.properties['zone- proj']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nbre-forage</th>\
+                        <td>' + (feature.properties['Nbre-forage'] !== null ? autolinker.link(String(feature.properties['Nbre-forage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">X(m)</th>\
@@ -397,11 +394,12 @@
                         <td>' + (feature.properties['Y(m)'] !== null ? autolinker.link(String(feature.properties['Y(m)']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Débit-fora</th>\
-                        <td>' + (feature.properties['Débit-fora'] !== null ? autolinker.link(String(feature.properties['Débit-fora']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Débit-forage</th>\
+                        <td>' + (feature.properties['Débit-forage'] !== null ? autolinker.link(String(feature.properties['Débit-forage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Superficie'] !== null ? autolinker.link(String(feature.properties['Superficie']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Superficie</th>\
+                        <td>' + (feature.properties['Superficie'] !== null ? autolinker.link(String(feature.properties['Superficie']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -414,7 +412,7 @@
         function style_Donnesprimtresmaraichers_5_0() {
             return {
                 pane: 'pane_Donnesprimtresmaraichers_5',
-                radius: 4.8,
+                radius: 5.200000000000001,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -423,7 +421,7 @@
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(51,160,44,1.0)',
+                fillColor: 'rgba(69,116,40,1.0)',
                 interactive: true,
             }
         }
